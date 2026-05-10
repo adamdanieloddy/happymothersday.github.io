@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Mother's Day Zalina</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            background: linear-gradient(135deg, #ec407a 0%, #c2185b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #c2185b;
+            font-weight: 300;
+            letter-spacing: 3px;
+            display: none;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            animation: slideUp 0.8s ease-out 0.2s backwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .photo-box {
+            position: relative;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #fff9c4 0%, #f8e5b8 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(193, 33, 91, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .photo-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 80px rgba(193, 33, 91, 0.25);
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: rgba(193, 33, 91, 0.3);
+            font-weight: 300;
+        }
+
+        .message-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(193, 33, 91, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .message-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(193, 33, 91, 0.15);
+        }
+
+        .message-label {
+            font-size: 0.85rem;
+            color: #ec407a;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .message-text {
+            font-size: 1.1rem;
+            color: #424242;
+            line-height: 1.9;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        .heart-accent {
+            color: #ec407a;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .message-box {
+                padding: 30px;
+            }
+
+            .message-text {
+                font-size: 1rem;
+            }
+        }
+
+        .decorative-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .flower {
+            position: absolute;
+            opacity: 0.12;
+            font-size: 100px;
+        }
+
+        .heart {
+            position: absolute;
+            opacity: 0.1;
+            font-size: 80px;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.08;
+        }
+
+        .flower:nth-child(1) { top: 10%; left: 5%; animation: float 8s ease-in-out infinite; }
+        .flower:nth-child(2) { top: 70%; right: 10%; animation: float 10s ease-in-out infinite 1.5s; }
+        .flower:nth-child(3) { bottom: 15%; left: 15%; animation: float 9s ease-in-out infinite 3s; }
+        .heart:nth-child(4) { top: 20%; right: 15%; animation: floatAlt 12s ease-in-out infinite 2s; }
+        .heart:nth-child(5) { bottom: 30%; right: 5%; animation: floatAlt 11s ease-in-out infinite 1s; }
+        .circle:nth-child(6) { top: 40%; left: 20%; width: 60px; height: 60px; background: linear-gradient(135deg, #ec407a, #c2185b); animation: pulse 6s ease-in-out infinite; }
+        .circle:nth-child(7) { bottom: 20%; right: 20%; width: 40px; height: 40px; background: #ec407a; animation: pulse 7s ease-in-out infinite 1.5s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            25% { transform: translateY(-25px) translateX(10px); }
+            50% { transform: translateY(-50px) translateX(-10px); }
+            75% { transform: translateY(-25px) translateX(10px); }
+        }
+
+        @keyframes floatAlt {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-40px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.08; }
+            50% { transform: scale(1.2); opacity: 0.15; }
+        }
+    </style>
+</head>
+<body>
+    <div class="decorative-elements">
+        <div class="flower">🌸</div>
+        <div class="flower">🌺</div>
+        <div class="flower">🌸</div>
+        <div class="heart">❤️</div>
+        <div class="heart">❤️</div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Happy Mothers Day</h1>
+            <p class="subtitle">Zalina</p>
+        </div>
+
+        <div class="content">
+            <div class="photo-box">
+                <img src="meandmom.jpg" alt="Me and Mom">
+            </div>
+
+            <div class="message-box">
+                <span class="message-label">For You</span>
+                <p class="message-text">
+                    Mom, you're literally the strongest person I know. Thank you for always being there, for believing in me even when I don't believe in myself, and for loving me unconditionally. You make everything better just by being you. I'm so grateful to have you. <span class="heart-accent">❤️</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add subtle parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const flowers = document.querySelectorAll('.flower');
+            flowers.forEach((flower, index) => {
+                flower.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+            });
+        });
+
+        // Mouse move parallax effect
+        document.addEventListener('mousemove', (e) => {
+            const flowers = document.querySelectorAll('.flower, .heart');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            flowers.forEach((flower, index) => {
+                flower.style.transform += ` translateX(${x * 30}px) translateY(${y * 30}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
